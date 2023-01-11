@@ -4,7 +4,16 @@ s = input("Enter anything: ")
 
 # isdecimal and isdigit are same
 
-if s.isdecimal():
+if s.isdigit():
     print("True")
+elif len(s) == 0:
+    print("\"\"")
 else:
-    print("False")
+    str = None
+    for char in s:
+        if char.isdigit():
+            str = True
+            print(str)
+            exit()
+    str = False
+    print(str)
