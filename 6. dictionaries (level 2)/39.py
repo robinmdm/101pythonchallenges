@@ -9,4 +9,16 @@ my_dict = {
 	"h": 7
  }
 
- 
+
+key_li = list(my_dict.keys())
+value_li = list(my_dict.values())
+
+frequency_dict = {}
+
+for i in value_li:
+    if i not in frequency_dict:
+        frequency_dict[i] = 1
+    else:
+        frequency_dict[i] = frequency_dict[i] + 1
+
+print(frequency_dict)

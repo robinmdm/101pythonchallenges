@@ -1,8 +1,11 @@
 import itertools
 
-li = [1,2,3]
+li = ['a', 'b', 'c', 'd']
 
 new_li = list(itertools.permutations(li))
-
+i = 1
 for p in new_li:
-    print(list(p))
+    print(list(p), i)
+    i = i + 1
+
+print(len(p))
