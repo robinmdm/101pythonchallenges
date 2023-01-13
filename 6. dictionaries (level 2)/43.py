@@ -1,19 +1,33 @@
-# s = "pramitshubhamswetharolstanpradeeprobin"
+my_dict = {
+	"a": [4, 3, 2],
+	"b": [5, 3, 7],
+	"c": [1, 9, 10],
+	"d": [3, 4, 1]
+}
 
-# count = 0
+get_keys = list(my_dict.keys())
+
+get_value = list(my_dict.values())
+
+new_list = []
+
+for i in get_value:
+    if isinstance(i, list):
+        i.sort()
+        new_list.append(i)
+
+print(new_list)
+
 # new_dict = {}
 
-# for letter in s:
-#     a = s.count(letter)
-#     new_dict[letter] = [a]
+# for i in get_keys:
+#     for j in new_list:
+#         new_dict[i] = [j]
+#         new_list.remove(j)
+#         break
 
 # print(new_dict)
 
-names = [['PRAMIT'], ['SHUBHAM'], ['SWETHA'], ['ROLSTAN'], ['PRADEEP']]
+new_dict = dict(zip(get_keys, new_list))
 
-for i in range(len(names)):
-    names[i] = ''.join(reversed(names[i][0]))
-
-for name in names:
-    print(list(name))
-    
+print(new_dict)
