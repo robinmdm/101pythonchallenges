@@ -1,10 +1,12 @@
-import turtle
-colors = ['red', 'purple', 'blue', 'green', 'orange', 'yellow']
-t = turtle.Pen()
-turtle.bgcolor('black')
-for x in range(360):
-    t.pencolor(colors[x%6])
-    t.width(x//100 + 1)
-    t.forward(x)
-    t.left(59)
-    hdfjvbdsjbvhdsb
+n = int(input("Enter only odd number: "))
+
+if n % 2 == 0:
+    print("Please give odd values")
+else:
+    middle_rows = (n + 2) // 2
+
+    for i in range(middle_rows):
+        print(" " * (middle_rows - i), "*" * (i*2 + 1))
+
+    for i in range(middle_rows - 2, -1, -1):
+        print(" " * (middle_rows - i), "*" * (i*2 + 1))
